@@ -6,32 +6,43 @@
         <div class="mb-3">
              <label for="title" class="form-label">Title</label>
              <input type="text" name="listing[title]" placeholder="Add a catchy title" class="form-control" required>
+             <div class="invalid-feedback">Please provide a valid title!</div>
+             <div class="valid-feedback">That's a good Title!</div>
         </div>
        
         <div class="mb-3">
              <label for="description" class="form-label">Description</label>
              <textarea name="listing[description]" class="form-control" placeholder="Enter description" required></textarea>
+             <div class="invalid-feedback">Please provide a valid short description!</div>
+             <div class="valid-feedback">Well-written and highlights the space nicely.</div>
         </div>
 
         <div class="mb-3">
          <label for="image" class="form-label">Image Link</label>
          <input type="text" name="listing[image]" class="form-control" placeholder="Enter Image URL/Link">
         </div>
+
         <div class="row">
         <div class="mb-3 col-md-4">
          <label for="price" class="form-label">Price</label>  
          <input type="number" class="form-control" name="listing[price]" placeholder="1200" required>
+         <div class="invalid-feedback">Please provide a valid price!</div>
+         <div class="valid-feedback">Great value for money.</div>
         </div>
 
         <div class="mb-3 col-md-8">
          <label for="country" class="form-label">Country</label>    
          <input type="text" class="form-control" name="listing[country]" placeholder="India" required>
+         <div class="invalid-feedback">Please enter a valid country!</div>
+         <div class="valid-feedback">Great country location.</div>
         </div>
         </div>
 
         <div class="mb-3">
          <label for="location" class="form-label">Location</label> 
          <input type="text" name="listing[location]" placeholder="Jaipur, Rajasthan" class="form-control" required>
+         <div class="invalid-feedback">Please enter a valid location!</div>
+         <div class="valid-feedback">Location enhances the overall appeal.</div>
         </div>
         
         <button class="btn btn-dark add-btn mt-2 mb-3 ">Add</button>
