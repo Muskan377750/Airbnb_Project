@@ -13,6 +13,7 @@ const Review = require("./models/review.js");
 const session = require("express-session");
 const listings = require("./routes/listing.js");
 const reviews  = require("./routes/review.js");
+const flash = require("connect-flash");
 
 main()
   .then(() => {
@@ -53,8 +54,7 @@ app.set("view Engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
-app.use("/listings", listings);
-app.use("/listings/:id/reviews",reviews);
+
 
 const sessionOptions = {
   secret:"mySecretSuperCode",
@@ -67,12 +67,22 @@ const sessionOptions = {
   },
 };
 
-app.use(session(sessionOptions));
-
 // Starting Route
 app.get("/", (req, res) => {
   res.send("Hi, I am root.");
 });
+
+app.use(session(sessionOptions));
+app.use(flash());
+
+app.use((req,res,next)=>{
+  res.locals.success = req.flash("success");
+  next();
+});
+
+app.use("/listings", listings);
+app.use("/listings/:id/reviews",reviews);
+
 
 // app.all("/*", (req, res, next) => {
 //   next(new ExpressError(404, "Page Not Found!"));
