@@ -10,16 +10,9 @@ const wrapAsync = require("./utils/wrapAsync.js");
 const ExpressError = require("./utils/ExpressError.js");
 const { listingSchema , reviewSchema} = require("./schema.js");
 const Review = require("./models/review.js");
-
+const session = require("express-session");
 const listings = require("./routes/listing.js");
 const reviews  = require("./routes/review.js");
-
-app.use(express.static(path.join(__dirname, "/public")));
-app.engine("ejs", ejsMate);
-app.set("view Engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
-app.use(express.urlencoded({ extended: true }));
-app.use(methodOverride("_method"));
 
 main()
   .then(() => {
@@ -53,11 +46,23 @@ async function main() {
 //   res.cookie("greet","Namaste");
 //   res.cookie("madeIn","India");
 //   res.send("Sent you some cookies");
-// })
-
+// });
+app.use(express.static(path.join(__dirname, "/public")));
+app.engine("ejs", ejsMate);
+app.set("view Engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride("_method"));
 app.use("/listings", listings);
 app.use("/listings/:id/reviews",reviews);
 
+const sessionOptions = {
+  secret:"mySecretSuperCode",
+  resave:false,
+  saveUninitialized:true,
+};
+
+app.use(session(sessionOptions));
 
 // Starting Route
 app.get("/", (req, res) => {
