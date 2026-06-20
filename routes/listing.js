@@ -75,7 +75,7 @@ router.post(
 
 //  Show Route
 router.get(
-  "/:id",isLoggedIn,
+  "/:id",
   wrapAsync(async (req, res) => {
     let { id } = req.params;
     const listing = await Listing.findById(id).populate("reviews");
