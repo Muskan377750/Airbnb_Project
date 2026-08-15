@@ -124,4 +124,30 @@ body{
 #map {
   height: 400px;
   width: 80vh;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.custom-popup {
+  padding: 5px;
+  text-align: center;
+}
+
+.custom-popup h5 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #222;
+}
+
+.custom-popup p {
+  margin: 0;
+  font-size: 13px;
+  color: gray;
+  line-height: 1.5;
+}
+
+.custom-popup p i {
+  margin-right: 4px;
 }
