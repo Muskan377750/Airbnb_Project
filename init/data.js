@@ -14,6 +14,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-118.6926, 34.0259],
     },
+    category:"Amazing Pools"
   },
 
   {
@@ -31,6 +32,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-74.006, 40.7128],
     },
+    category:"Amazing Pools"
   },
 
   {
@@ -48,6 +50,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-106.8175, 39.1911],
     },
+    category:"Mountains"
   },
 
   {
@@ -65,6 +68,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [11.2558, 43.7696],
     },
+    category:"Top of the world"
   },
 
   {
@@ -82,6 +86,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-122.6784, 45.5152],
     },
+    category:"A Frames"
   },
 
   {
@@ -99,6 +104,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-86.8515, 21.1619],
     },
+    category:"Bed & Breakfasts"
   },
 
   {
@@ -116,6 +122,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-120.0324, 39.0968],
     },
+    category:"Vineyards"
   },
 
   {
@@ -133,6 +140,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-118.2437, 34.0522],
     },
+    category:"Iconic Cities"
   },
 
   {
@@ -150,6 +158,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [7.2289, 46.0964],
     },
+    category:"Trending"
   },
 
   {
@@ -167,6 +176,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [34.8333, -2.3333],
     },
+    category:"Arctic"
   },
 
   {
@@ -184,6 +194,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [4.9041, 52.3676],
     },
+    category:"Domes"
   },
 
   {
@@ -201,6 +212,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [178.065, -17.7134],
     },
+    category:"A Frames"
   },
 
   {
@@ -218,6 +230,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-1.8433, 51.833],
     },
+    category:"Camping"
   },
 
   {
@@ -235,6 +248,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-71.0589, 42.3601],
     },
+    category:"Iconic Cities"
   },
 
   {
@@ -252,6 +266,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [115.1889, -8.4095],
     },
+    category:"Vineyards"
   },
 
   {
@@ -269,6 +284,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-115.5708, 51.1784],
     },
+    category:"Domes"
   },
 
   {
@@ -286,6 +302,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-80.1918, 25.7617],
     },
+    category:"Arctic"
   },
     {
     title: "Tropical Villa in Phuket",
@@ -302,6 +319,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [98.3923, 7.8804],
     },
+    category:"Trending"
   },
 
   {
@@ -319,6 +337,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-4.2026, 57.12],
     },
+    category:"Bed & Breakfasts"
   },
 
   {
@@ -336,6 +355,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [55.2708, 25.2048],
     },
+    category:"Trending"
   },
 
   {
@@ -353,6 +373,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-110.3626, 46.8797],
     },
+    category:"Farms"
   },
 
   {
@@ -370,6 +391,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [25.3289, 37.4467],
     },
+    category:"Rooms"
   },
 
   {
@@ -387,6 +409,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-84.0907, 9.7489],
     },
+    category:"Rooms"
   },
 
   {
@@ -404,6 +427,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-79.9311, 32.7765],
     },
+    category:"Farms"
   },
 
   {
@@ -421,6 +445,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [139.6917, 35.6895],
     },
+    category:"Castles"
   },
 
   {
@@ -438,6 +463,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-71.5724, 43.1939],
     },
+    category:"Domes"
   },
 
   {
@@ -455,6 +481,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [73.2207, 3.2028],
     },
+    category:"Vineyards"
   },
 
   {
@@ -472,6 +499,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-106.8175, 39.1911],
     },
+    category:"Mountains"
   },
 
   {
@@ -489,6 +517,7 @@ const sampleListings = [
       type: "Point",
       coordinates: [-84.0907, 9.7489],
     },
+    category:"Designs"
   },
 ];
 

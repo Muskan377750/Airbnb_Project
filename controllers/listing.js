@@ -2,7 +2,13 @@ const Listing = require("../models/listing.js");
 const axios = require("axios");
 
 module.exports.index = async (req, res) => {
-  const allListings = await Listing.find({});
+  const {category} = req.query;
+  let allListings;
+  if(category){
+    allListings = await Listing.find({category});
+  }else{
+    allListings = await Listing.find({});
+  }
   res.render("./listings/index.ejs", { allListings });
 };
 
@@ -13,7 +19,6 @@ module.exports.renderNewForm = (req, res) => {
 module.exports.addNewListing = async (req, res, next) => {
   let url = req.file.path;
   let filename = req.file.filename;
-
   const { location, country } = req.body.listing;
 
   // Geocoding using Nominatim

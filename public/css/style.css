@@ -25,6 +25,7 @@ body{
     color: #222222;
 }
 
+
 /* footer */
 .f-info-links a{
     text-decoration: none;
@@ -103,8 +104,12 @@ body{
 }
 
 /* show */
-.show-img{
-    height: 30vh;
+.show-img {
+    width: 60%;
+    max-width: 600px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 1rem;
 }
 
 .btns{
@@ -150,4 +155,141 @@ body{
 
 .custom-popup p i {
   margin-right: 4px;
+}
+
+/* Filter container */
+.filter-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+/* Filter */
+#filters {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+
+    padding: 1.2rem 2rem 1rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    white-space: nowrap;
+
+    /* Important */
+    flex: 1;
+    min-width: 0;
+
+    /* Keep your scrollbar hidden */
+    scrollbar-width: none;
+}
+
+#filters::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Individual filter */
+.filter {
+    min-width: 75px;
+    flex-shrink: 0;
+
+    text-align: center;
+    text-decoration: none;
+    color: #222;
+    opacity: 0.7;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid transparent;
+
+    transition: all 0.2s ease;
+}
+
+.filter i {
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+}
+
+.filter p {
+    margin: 0;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.filter:hover {
+    opacity: 1;
+    color: #000;
+    transform: translateY(-2px);
+    border-bottom: 2px solid #222;
+}
+
+/* Toggle */
+.tax-toggle {
+    flex-shrink: 0;
+    padding: 0 1.5rem;
+    background-color: white;
+    white-space: nowrap;
+}
+
+/* Outer toggle box */
+.tax-toggle .form-check-reverse.form-switch {
+    width: 218px;
+    height: 44px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 12px;
+
+    border: 1px solid #ddd;
+    border-radius: 12px;
+
+    background-color: white;
+    box-sizing: border-box;
+}
+
+/* TEXT → LEFT */
+.tax-toggle .form-check-reverse.form-switch .form-check-label {
+    order: 1;
+
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #222;
+
+    margin: 0;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+/* SWITCH → RIGHT */
+.tax-toggle .form-check-reverse.form-switch .form-check-input {
+    order: 2;
+
+    width: 2.2rem;
+    height: 1.25rem;
+
+    margin: 0 !important;
+
+    cursor: pointer;
+}
+
+/* Tax information */
+.tax-info {
+    display: none;
+}
+/* Show image in edit form */
+.edit-original-img {
+    width: 300px;
+    height: 200px;
+    border-radius: 12px;
+    display: block;
+    margin-top: 8px;
 }

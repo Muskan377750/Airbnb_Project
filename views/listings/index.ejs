@@ -1,6 +1,84 @@
 <% layout("/layouts/boilerplate")%>
 <body>
-    <h3>All Listings</h3>
+  <div class="filter-container">
+  <div id="filters">
+    <a class="filter" href="/listings?category=Trending">
+      <div> <i class="fa-solid fa-fire"></i></div>
+      <p>Trending</p>
+    </a>
+    <a class="filter" href="/listings?category=Rooms">
+      <div> <i class="fa-solid fa-bed"></i></div>
+      <p>Rooms</p>
+    </a>
+    <a class="filter" href="/listings?category=Iconic%20Cities">
+      <div> <i class="fa-solid fa-mountain-city"></i></div>
+      <p>Iconic Cities</p>
+    </a>
+    <a class="filter" href="/listings?category=Mountains">
+      <div> <i class="fa-solid fa-mountain"></i></div>
+      <p>Mountains</p>
+    </a>
+    <a class="filter" href="/listings?category=Castles">
+      <div> <i class="fa-brands fa-fort-awesome"></i></div>
+      <p>Castles</p>
+    </a>
+    <a class="filter" href="/listings?category=Amazing%20Pools">
+      <div> <i class="fa-solid fa-person-swimming"></i></div>
+      <p>Amazing Pools</p>
+    </a>
+    <a class="filter" href="/listings?category=Camping">
+      <div> <i class="fa-solid fa-campground"></i></div>
+      <p>Camping</p>
+    </a>
+    <a class="filter" href="/listings?category=Farms">
+      <div> <i class="fa-solid fa-cow"></i></div>
+      <p>Farms</p>
+    </a>
+    <a class="filter" href="/listings?category=Arctic">
+      <div> <i class="fa-solid fa-snowflake"></i></div>
+      <p>Arctic</p>
+    </a>
+    <a class="filter" href="/listings?category=Top%20of%20the%20world">
+      <div><i class="fa-solid fa-flag"></i></div>
+      <p>Top of the world</p>
+    </a>
+    <a class="filter" href="/listings?category=Bed%20%26%20Breakfasts">
+      <div><i class="fa-solid fa-mug-hot"></i></div>
+      <p>Bed & Breakfasts</p>
+    </a>
+    <a class="filter" href="/listings?category=Vineyards">
+      <div><i class="fa-solid fa-wine-glass"></i></div>
+      <p>Vineyards</p>
+    </a>
+    <a class="filter" href="/listings?category=Domes">
+      <div><i class="fa-solid fa-igloo"></i></div>
+      <p>Domes</p>
+    </a>
+    <a class="filter" href="/listings?category=Designs">
+      <div><i class="fa-solid fa-building-columns"></i></div>
+      <p>Designs</p>
+    </a>
+    <a class="filter" href="/listings?category=A%20Frames">
+      <div><i class="fa-solid fa-a"></i></div>
+      <p>A Frames</p>
+    </a>
+  </div>  
+   <div class="tax-toggle">
+    <div class="form-check-reverse form-switch">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        role="switch"
+        id="switchCheckDefault"
+      >
+
+      <label class="form-check-label" for="switchCheckDefault">
+        Display total after taxes
+      </label>
+    </div>
+  </div>
+</div>
+    <!-- <h3>All Listings</h3> -->
     <!-- <form action="/listings/new" method="GET">
         <button>Create New Listing</button>
     </form> -->
@@ -16,11 +94,26 @@
     <p class="card-text">
       <b> <%=listing.title%> </b> 
         <br>
-        &#8377; <%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %> /night
+        &#8377; <%= listing.price ? listing.price.toLocaleString("en-IN") : "N/A" %> /night 
+        <i class="tax-info">&nbsp; &nbsp; +18% GST</i>
     </p>
   </div>
 </div>
 </a>
      <%}%>
      </div>
+
+     <script>
+      let taxSwitch = document.getElementById("switchCheckDefault");
+      taxSwitch.addEventListener("click",()=>{
+       let taxInfo = document.getElementsByClassName("tax-info");
+       for(info of taxInfo){
+        if(info.style.display != "inline"){
+          info.style.display = "inline";
+        }else{
+          info.style.display = "none";
+        }
+       }
+      });
+     </script>
 </body>
